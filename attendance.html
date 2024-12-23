@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance - Attendance System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add these styles for the new elements */
+        .subject-controls {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .subject-controls select,
+        .subject-controls input {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        .subject-controls button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .subject-controls button:hover {
+            background-color: #45a049;
+        }
+
+        #attendance-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #attendance-list li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            border-left: 4px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Attendance System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Attendance</h2>
+        <div class="user-info">
+            <p>Welcome, <span id="user-name"></span>!</p>
+        </div>
+        
+        <!-- New subject selection and management section -->
+        <div class="subject-controls">
+            <div class="add-subject">
+                <input type="text" id="new-subject" placeholder="Add new subject">
+                <button id="add-subject">Add Subject</button>
+            </div>
+            <div class="subject-select">
+                <select id="subject-dropdown">
+                    <option value="">Select Subject</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="mark-attendance">Mark Attendance</button>
+        
+        <div class="attendance-history">
+            <h3>Attendance History</h3>
+            <ul id="attendance-list"></ul>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
